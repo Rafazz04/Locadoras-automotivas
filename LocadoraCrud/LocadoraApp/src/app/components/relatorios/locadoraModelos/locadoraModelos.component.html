@@ -1,0 +1,24 @@
+<app-titulo [titulo]="titulo"></app-titulo>
+<div class="container mt-4">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Nome da locadora</th>
+        <th scope="col">Nome do Modelo</th>
+        <th scope="col">Nome da Montadora</th>
+        <th scope="col">Quantidade de Veículos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let relatorio of relatorioLocadoraModelos">
+        <tr>
+          <td>{{ relatorio.nomeLocadora }}</td>
+          <td>{{ relatorio.nomeModelo }}</td>
+          <td>{{ relatorio.nomeMontadora }}</td>
+          <td>{{ relatorio.quantidadeVeiculos }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+

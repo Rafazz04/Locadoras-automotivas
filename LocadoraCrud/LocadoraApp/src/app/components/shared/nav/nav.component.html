@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a routerLink="locadora" class="navbar-brand">LOCADORAS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a routerLink="modelo" routerLinkActive="active" class="nav-link active" aria-current="page" href="#">Modelos</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="montadora" routerLinkActive="active" class="nav-link" href="#">Montadoras</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="veiculo" routerLinkActive="active" class="nav-link" href="#">Veiculos</a>
+        </li>
+        <li class="nav-item dropdown" dropdown>
+          <a  id="button-animated" dropdownToggle class="nav-link dropdown-toggle" style="cursor: pointer;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Relatórios
+          </a>
+          <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu">
+            <li><a routerLink="locadoraModelos" class="dropdown-item" href="#">Relatórios Modelos</a></li>
+            <li><a routerLink="locadoraVeiculos" class="dropdown-item" href="#">Relatórios Veiculos</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

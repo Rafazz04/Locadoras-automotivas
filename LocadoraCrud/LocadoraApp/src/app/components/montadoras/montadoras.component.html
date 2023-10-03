@@ -1,0 +1,17 @@
+<app-titulo [titulo]="titulo"></app-titulo>
+<div class="container mt-4">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Nome da Montadora</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let montadora of montadoras" style="cursor: pointer;">
+        <tr>
+          <td>{{ montadora.nomeMontadora }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

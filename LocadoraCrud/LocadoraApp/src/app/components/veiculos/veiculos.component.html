@@ -1,0 +1,34 @@
+<!-- veiculos.component.html -->
+<app-titulo [titulo]="titulo"></app-titulo>
+<div class="container mt-4">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Placa</th>
+        <th scope="col">Chassi</th>
+        <th scope="col">Nome do Modelo</th>
+        <th scope="col">Número de Portas</th>
+        <th scope="col">Cor</th>
+        <th scope="col">Fabricante</th>
+        <th scope="col">Ano Modelo</th>
+        <th scope="col">Ano Fabricação</th>
+        <th scope="col">Data de Criação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let veiculo of veiculos">
+        <tr>
+          <td>{{ veiculo.placa }}</td>
+          <td>{{ veiculo.chassi }}</td>
+          <td>{{ veiculo.nomeModelo }}</td>
+          <td>{{ veiculo.numeroPortas }}</td>
+          <td>{{ veiculo.cor }}</td>
+          <td>{{ veiculo.fabricante }}</td>
+          <td>{{ veiculo.anoModelo }}</td>
+          <td>{{ veiculo.anoFabricacao }}</td>
+          <td>{{ veiculo.dataCriacao | date:'short' }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

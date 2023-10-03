@@ -1,0 +1,17 @@
+<app-titulo [titulo]="titulo"></app-titulo>
+<div class="container mt-4">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th>Nome do Modelo</th>
+        <th>ID da Montadora</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let modelo of modelos" style="cursor: pointer;">
+        <td>{{ modelo.nomeModelo }}</td>
+        <td>{{ modelo.montadoraId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

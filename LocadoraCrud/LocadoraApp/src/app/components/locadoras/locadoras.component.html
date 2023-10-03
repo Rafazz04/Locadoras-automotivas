@@ -1,0 +1,93 @@
+<div *ngIf="locadoraSelecionada" class="container mt-4">
+  <app-titulo [titulo]="'Editar locadora'"></app-titulo>
+
+  <form [formGroup]="locadoraForm" (ngSubmit)="saveLocadora()">
+    <div class="mb-3">
+      <label for="nomeFantasia" class="form-label">Nome Fantasia</label>
+      <input type="text" class="form-control" id="nomeFantasia" formControlName="nomeFantasia" required>
+    </div>
+    <div class="mb-3">
+      <label for="Razão Social" class="form-label">Razão Social</label>
+      <input type="text" class="form-control" id="razaoSocial" formControlName="razaoSocial" required>
+    </div>
+    <div class="mb-3">
+      <label for="CNPJ" class="form-label">CNPJ</label>
+      <input type="text" class="form-control" id="cnpj" formControlName="cnpj" required>
+    </div>
+    <div class="mb-3">
+      <label for="E-mail" class="form-label">E-mail</label>
+      <input type="text" class="form-control" id="email" formControlName="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="Telefone" class="form-label">Telefone</label>
+      <input type="text" class="form-control" id="telefone" formControlName="telefone" required>
+    </div>
+    <div class="mb-3">
+      <label for="Cep" class="form-label">Cep</label>
+      <input type="text" class="form-control" id="Cep" formControlName="cep" required>
+    </div>
+    <div class="mb-3">
+      <label for="Rua" class="form-label">Rua</label>
+      <input type="text" class="form-control" id="rua" formControlName="rua" required>
+    </div>
+    <div class="mb-3">
+      <label for="Número" class="form-label">Número</label>
+      <input type="text" class="form-control" id="numero" formControlName="numero" required>
+    </div>
+    <div class="mb-3">
+      <label for="Bairro" class="form-label">Bairro</label>
+      <input type="text" class="form-control" id="bairro" formControlName="bairro" required>
+    </div>
+    <div class="mb-3">
+      <label for="Estado" class="form-label">Estado</label>
+      <input type="text" class="form-control" id="estado" formControlName="estado" required>
+    </div>
+    <div class="mb-3">
+      <label for="Cidade" class="form-label">Cidade</label>
+      <input type="text" class="form-control" id="cidade" formControlName="cidade" required>
+    </div>
+    <div class="mt-1 d-flex justify-content-end">
+      <button type="button" class="btn btn-outline-secondary" (click)="voltar()">voltar</button>
+      <button type="button" class="btn btn-outline-secondary" (click)="voltar()">Atualizar</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="!locadoraSelecionada" class="container mt-4">
+  <app-titulo [titulo]="titulo"></app-titulo>
+  <div class="mt-1 d-flex justify-content-end">
+    <button type="button" class="btn btn-outline-success">Adicionar</button>
+  </div>
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Nome Fantasia</th>
+        <th>Razão Social</th>
+        <th>CNPJ</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Cep</th>
+        <th>Rua</th>
+        <th>Numero</th>
+        <th>Bairro</th>
+        <th>Estado</th>
+        <th>cidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let locadora of locadoras" style="cursor: pointer;" (click)="locadoraSelect(locadora.cnpj)">
+        <td>{{ locadora.nomeFantasia }}</td>
+        <td>{{ locadora.razaoSocial }}</td>
+        <td>{{ locadora.cnpj }}</td>
+        <td>{{ locadora.email }}</td>
+        <td>{{ locadora.telefone }}</td>
+        <td>{{locadora.cep}}</td>
+        <td>{{locadora.rua}}</td>
+        <td>{{locadora.numero}}</td>
+        <td>{{locadora.bairro}}</td>
+        <td>{{locadora.estado}}</td>
+        <td>{{locadora.cidade}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
