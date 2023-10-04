@@ -25,13 +25,14 @@ Fazer o clone do projeto com o comando: git clone https://github.com/Rafazz04/Lo
 ## 🔨 Funcionalidades do projeto
 -``Cadastro de Locadoras, Montadoras, Modelos e Veículos:`` Post<br>
 -``Listar todas as Locadoras, Montadoras, Modelos e Veículos:`` Get<br>
--``Listagem de filtros para obter relatórios:`` Get<br>
+-``Listagem de filtros para obter relatórios de Locadora modelos, e Locadoras veículos:`` Get<br>
 -``Lista uma única Locadoras, Montadoras, Modelos e Veículos especificados:`` GetById()<br>
 -``Atualizar lista de Locadoras, Montadoras, Modelos e Veículos:`` Put<br>
 -``Deletar Locadoras, Montadoras, Modelos e Veículos:`` Delete<br>
 
 ## 👨🏻‍💻 Melhorias
 - ``Adicionar a tela de cadastro e atualização para Locadora, modelos, veiculos e montadoras``
+-  ``Adicionar a rota para os relatórios``
 - ``Melhorar UI``
 
 ## ✔️ Técnicas e Tecnologias utilizadas
@@ -43,4 +44,5 @@ Fazer o clone do projeto com o comando: git clone https://github.com/Rafazz04/Lo
 - ``Bootstrap``
 - ``Mvc``
 - ``Injeção de dependência``
+- ``Integração do Back end, Front end e DataBase``
 
